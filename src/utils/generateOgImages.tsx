@@ -7,13 +7,13 @@ import siteOgImage from "./og-templates/site";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
+    "https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
+    "https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
@@ -28,13 +28,13 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "IBM Plex Mono",
+      name: "Fira Mono",
       data: fontRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
+      name: "Fira Mono",
       data: fontBold,
       weight: 600,
       style: "normal",
